@@ -1,0 +1,186 @@
+/* Variables to use for the styles */
+:root {
+  --section-heading-text: hsl(14, 45%, 36%);
+  --prep-text: hsl(332, 51%, 32%);
+  --main-background: hsl(0, 0%, 100%);
+  --prep-info-background: hsl(330, 100%, 98%);
+  --body-background: hsl(30, 54%, 90%);
+  --divider-color: hsl(30, 18%, 87%);
+  --paragraph-text: hsl(30, 10%, 34%);
+  --dish-text: hsl(24, 5%, 18%);
+  /* Font to use: Outfit. Weights: 400, 600, 700 */
+}
+
+/* Background set on the body */
+body {
+  background-color: var(--body-background);
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Outfit", serif;
+  font-weight: 400;
+  width: 100%;
+  background-color: var(--main-background);
+  color: var(--paragraph-text);
+  min-height: 100%;
+}
+
+main > img {
+  width: 100%;
+}
+
+/* Section Styles */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 77%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--divider-color);
+  gap: 2rem;
+}
+
+#header-text {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--dish-text);
+}
+
+.section-paragraphs {
+  color: var(--paragraph-text);
+  line-height: 1.5rem;
+}
+
+.section-paragraphs:last-of-type {
+  align-self: flex-start;
+}
+
+.section-headers {
+  font-size: 1.5rem;
+  color: var(--section-heading-text);
+}
+
+.section-list {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* Aside Styles */
+aside {
+  background-color: var(--prep-info-background);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+#preparation-info {
+  font-size: 1.25rem;
+  color: var(--prep-text);
+}
+
+/* Individual element styles */
+h1,
+h2 {
+  font-family: "Young Serif", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  width: 100%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* List styles */
+.list {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem 0;
+}
+
+.list li {
+  padding-left: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Nutrition Info Styles */
+.nutrition-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nutrition-info li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.nutrition-info li:last-of-type {
+  border-bottom: none;
+}
+
+.nutrition-info li > span {
+  padding-left: 2rem;
+}
+
+.nutrition-info li > strong {
+  padding-right: 2rem;
+  color: var(--section-heading-text);
+}
+
+/* Miscellaneous Classes For Styling Specific Elements */
+.no-border-bottom {
+  border-bottom: none;
+  padding: none;
+}
+
+/* Responsiveness Styles */
+@media (min-width: 568px) {
+  body {
+    padding: 5rem;
+  }
+
+  main {
+    width: 60%;
+    padding: 2rem;
+    border-radius: 3rem;
+    align-items: flex-start;
+  }
+
+  section,
+  aside {
+    width: 100%;
+  }
+
+  main > img {
+    border-radius: 15px;
+  }
+
+  aside {
+    align-self: center;
+    align-items: flex-start;
+    min-width: 94%;
+  }
+}
